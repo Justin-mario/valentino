@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+
+{% block title %} Trend Street | Home {% endblock %}
+
+{% block body %}
+<div class="container-fluid p-0">
+  <!-- Hero Section -->
+  <div class="position-relative">
+    <div class="hero-image d-flex align-items-center justify-content-center" style="background-image: url('/api/placeholder/1200/600'); height: 70vh; background-size: cover; background-position: center;">
+      <div class="text-center p-4" style="background-color: rgba(255, 255, 255, 0.8);">
+        <h1 class="display-4 fw-bold mb-3">TREND STREET</h1>
+        <p class="lead mb-4">Discover This Season's Essential High Street Looks</p>
+        <button class="btn btn-dark btn-lg px-4 mb-2">SHOP NOW</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Featured Categories -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4 fw-bold">TRENDING CATEGORIES</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100">
+          <img src="/api/placeholder/400/500" class="card-img-top" alt="Women's Fashion">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">WOMEN'S COLLECTION</h5>
+            <p class="card-text">Elevate your style with our curated selection of women's high street fashion.</p>
+            <a href="#" class="btn btn-outline-dark">DISCOVER</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100">
+          <img src="/api/placeholder/400/500" class="card-img-top" alt="Men's Fashion">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">MEN'S COLLECTION</h5>
+            <p class="card-text">Upgrade your wardrobe with the latest trends in men's high street fashion.</p>
+            <a href="#" class="btn btn-outline-dark">DISCOVER</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100">
+          <img src="/api/placeholder/400/500" class="card-img-top" alt="Accessories">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">ACCESSORIES</h5>
+            <p class="card-text">Complete your look with our stylish selection of on-trend accessories.</p>
+            <a href="#" class="btn btn-outline-dark">DISCOVER</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Seasonal Collection Banner -->
+  <div class="container-fluid p-0 my-5">
+    <div class="row g-0">
+      <div class="col-md-6">
+        <img src="/api/placeholder/600/400" class="img-fluid" alt="Spring Collection">
+      </div>
+      <div class="col-md-6 d-flex align-items-center" style="background-color: #f8f9fa;">
+        <div class="p-5">
+          <h2 class="fw-bold mb-3">SPRING/SUMMER COLLECTION</h2>
+          <p class="mb-4">Our latest collection brings you the hottest high street trends for the season. From lightweight fabrics to vibrant colors, discover pieces that will keep you stylish and comfortable.</p>
+          <a href="#" class="btn btn-dark">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Latest Arrivals -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4 fw-bold">JUST ARRIVED</h2>
+    <div class="row g-4">
+      {% for i in range(4) %}
+      <div class="col-6 col-md-3">
+        <div class="card border-0 shadow-sm h-100">
+          <img src="/api/placeholder/300/400" class="card-img-top" alt="New Arrival Item">
+          <div class="card-body">
+            <h5 class="card-title">Trending Item</h5>
+            <p class="card-text fw-bold">$49.99</p>
+            <button class="btn btn-sm btn-outline-dark">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="text-center mt-4">
+      <a href="#" class="btn btn-dark">VIEW ALL NEW ARRIVALS</a>
+    </div>
+  </div>
+  
+  <!-- Style Tips Section -->
+  <div class="container my-5 py-4" style="background-color: #f8f9fa;">
+    <h2 class="text-center mb-4 fw-bold">STYLE INSPIRATION</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card border-0 shadow-sm h-100">
+          <img src="/api/placeholder/600/400" class="card-img-top" alt="Style Guide">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">5 WAYS TO STYLE DENIM THIS SEASON</h5>
+            <p class="card-text">Discover fresh ways to incorporate denim into your everyday high street looks.</p>
+            <a href="#" class="btn btn-outline-dark">READ MORE</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card border-0 shadow-sm h-100">
+          <img src="/api/placeholder/600/400" class="card-img-top" alt="Fashion Tips">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">ESSENTIAL PIECES FOR A CAPSULE WARDROBE</h5>
+            <p class="card-text">Build a versatile wardrobe with these high street fashion essentials.</p>
+            <a href="#" class="btn btn-outline-dark">READ MORE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Newsletter -->
+  <div class="container my-5 py-5 text-center">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <h2 class="fw-bold mb-3">GET EXCLUSIVE UPDATES</h2>
+        <p class="mb-4">Subscribe to our newsletter to receive early access to sales, new arrivals, and styling tips.</p>
+        <div class="input-group mb-3">
+          <input type="email" class="form-control" placeholder="Your email address" aria-label="Email address">
+          <button class="btn btn-dark" type="button">SUBSCRIBE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
